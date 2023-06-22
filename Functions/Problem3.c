@@ -3,12 +3,12 @@
 int findLargestNumber(int num) {
     int maxNum = 0;
 
-    // Convert the number to a string for easier manipulation
+    
     char numStr[5];
     sprintf(numStr, "%d", num);
 
     for (int i = 0; i < 4; i++) {
-        // Remove the current digit by shifting the remaining digits
+        
         int tempNum = 0;
         for (int j = 0; j < 4; j++) {
             if (j != i) {
@@ -16,7 +16,7 @@ int findLargestNumber(int num) {
             }
         }
 
-        // Update the maximum number if the current number is larger
+        
         if (tempNum > maxNum) {
             maxNum = tempNum;
         }
